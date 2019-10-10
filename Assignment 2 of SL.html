@@ -1,0 +1,227 @@
+<html>
+<head>
+
+<title>
+Assignment 2 of SL
+</title>
+</head>
+
+<h1>Question#1 Difference between Var, Let and Const???</h1>
+
+<body>
+
+<h2>Ans: Var </h2>
+<p> The var statement declares a variable. Variables are containers for storing information. Creating a variable in JavaScript is called "declaring" a variable.
+Examples are: var id =10; , var name = "Umar Abdul Rehman"; etc. These variable are declares in a tag called 'script'. <b> Examples of 
+var are performed in Console. </b> </p>
+<br/>
+<h3>Examples Explanation</h3>
+<p>//Example 1 In this example we declares three variables with same name <b>'x'</b> then its value is changed when we declares it multiple times. 
+These examples are define the different scopes of variable. <br/>
+var  x = 2;<br/>
+// Here x is 2<br/>
+{  <br/>
+  var x = 10 ;<br/>
+  // Here x is 10<br/>
+}<br/>
+// Here x is 0<br/>  
+  var x = 0;<br/>
+console.log("Value of x is "+x);<br/>
+<br/>
+//Example 2 In this example we declares two variables with same name <b>'id'</b> then we its value does not changed when we declares same variable in function.
+<br/>
+var id = 3;<br/>
+
+// code here can use id<br/>
+
+function myFunction() {<br/>
+  // code here can also use id<br/>
+  var id = 5; <br/>
+}<br/>
+
+console.log("Value of id is "+id);<br/>
+
+ </p>
+
+
+
+<h2>Let  </h2>
+<p> Let allows you to declare variables that are limited to a scope of a block statement, or expression on which it is used,
+ unlike the var keyword, which defines a variable globally, or locally to an entire function regardless of block scope</p>
+<br/>
+<h3>Examples Explanation</h3>
+<p><b>Example 1 </b> In this example we define two functions of <b>'VarTest' and 'VarLet'</b> then its value is changed in varTest when we declares it multiple times 
+but in varLet function its value does not changed.  <br/>
+
+
+function varTest() { <br/>
+  var x = 1; <br/>
+  {<br/>
+    var x = 2;  // same variable!<br/>
+    console.log(x);  // 2<br/>
+  }
+  console.log(x);  // 2<br/>
+}
+
+function letTest() {<br/>
+  let x = 1;<br/>
+  {<br/>
+    let x = 2;  // different variable<br/>
+    console.log(x);  // 2<br/>
+  }<br/>
+  console.log(x);  // 1<br/>
+}<br/>
+
+
+<b>Example 2 </b><br/> 
+
+let x = 1;<br/>
+
+if (x === 1) {<br/>
+  let x = 2;<br/>
+
+  console.log(x);<br/>
+  // expected output: 2<br/>
+}<br/>
+
+console.log(x);<br/>
+// expected output: 1<br/>
+ </p>
+
+
+
+
+
+
+
+<h2>Const  </h2>
+<p> The const declaration creates a read-only reference to a value. It does not mean the value it holds is immutable, just that the variable identifier cannot be reassigned. 
+A constant cannot share its name with a function or a variable in the same scope.</p>
+<br/>
+<h3>Examples Explanation</h3>
+<p><b>Example 1 </b>  if we un comment the line number 212 and 215 then the difference shown in console in the form of error.   <br/>
+
+
+const MY_FAV = 20;<br/>
+
+// the name MY_FAV is reserved for constant above, so this will fail too<br/>
+var MY_FAV = 20;<br/>
+
+// this throws an error too<br/>
+let MY_FAV = 20;<br/>
+
+ </p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script>
+
+var Var = "Examples of Var";
+console.log(Var);
+ 
+//Example 1
+var  x = 2;
+// Here x is 2
+{  
+  var x = 10 ;
+  // Here x is 10
+}
+// Here x is 0  
+  var x = 0;
+console.log("Value of x is "+x);
+
+//Example 2
+var id = 3;
+
+// code here can use carName
+
+function myFunction() {
+  // code here can also use carName
+  var id = 5; 
+}
+
+console.log("Value of id is "+id);
+
+
+
+
+
+
+var Let = "Examples of Let";
+
+console.log(Let);
+
+function varTest() {
+  var y = 1;
+  {
+    var y = 2;  // same variable!
+    console.log(y);  // 2
+  }
+  console.log(y);  // 2
+}
+ varTest();
+function letTest() {
+  let y = 1;
+  {
+    let y = 2;  // different variable
+    console.log(y);  // 2
+  }
+  console.log(y);  // 1
+}
+letTest();
+
+//Example 2
+let z = 1;
+if (z === 1) {
+  let z = 2;
+
+  console.log(z);
+  // expected output: 2
+}
+
+console.log(z);
+// expected output: 1
+
+
+
+var Const = "Example of Const";
+
+const MY_FAV = 20;
+
+console.log(Const);
+
+console.log(MY_FAV);
+// the name MY_FAV is reserved for constant above, so this will fail too
+//var MY_FAV = 20;
+
+// this throws an error too
+//let MY_FAV = 20;
+
+</script>
+
+</body>
+
+
+
+
+</html>
